@@ -15,16 +15,16 @@ A premium, enterprise-grade Inventory & Warehouse Management web application bui
 ### Dashboard Overview
 ![Dashboard](https://raw.githubusercontent.com/Shivamitcs/Inventory-warehouse/main/src/images/1.png)
 
-### Products & Stock Management
+ ### Dark Mode Interface
 ![Products](https://raw.githubusercontent.com/Shivamitcs/Inventory-warehouse/main/src/images/2.png)
 
-### Suppliers & Vendors Dashboard
+ ### Products & Stock Management
 ![Suppliers](https://raw.githubusercontent.com/Shivamitcs/Inventory-warehouse/main/src/images/3.png)
 
-### Dark Mode Interface
+### Suppliers & Vendors Dashboard
 ![Dark Mode](https://raw.githubusercontent.com/Shivamitcs/Inventory-warehouse/main/src/images/4.png)
 
-### Mobile Responsive View
+### Alert
 ![Mobile](https://raw.githubusercontent.com/Shivamitcs/Inventory-warehouse/main/src/images/5.png)
 
 </div>
