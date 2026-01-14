@@ -1,0 +1,106 @@
+
+    <div class="container mx-auto px-4 py-6 max-w-7xl" #pageContainer>
+      <div class="mb-6" [@fadeIn]>
+        <h2 class="text-2xl mb-2">Alerts & Reorder Management</h2>
+        <p class="text-text-secondary">Monitor stock levels and manage reorder actions</p>
+      </div>
+      
+      <!-- Alert Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6" [@fadeIn]>
+        <div class="glass rounded-xl p-6 border-2 border-red-500/50 pulse-border">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-lg">Low Stock Alert</h3>
+              <p class="text-sm text-text-secondary">12 items below threshold</p>
+            </div>
+          </div>
+          <button class="w-full px-4 py-2 bg-red-500 text-white rounded-lg hover:opacity-90 transition-opacity mt-4">
+            Review & Reorder
+          </button>
+        </div>
+        
+        <div class="glass rounded-xl p-6 border-2 border-orange-500/50">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-lg">Expiring Items</h3>
+              <p class="text-sm text-text-secondary">5 items expiring soon</p>
+            </div>
+          </div>
+          <button class="w-full px-4 py-2 bg-orange-500 text-white rounded-lg hover:opacity-90 transition-opacity mt-4">
+            View Items
+          </button>
+        </div>
+      </div>
+      
+      <!-- Reorder Actions -->
+      <div class="glass rounded-xl p-6 mb-6" [@fadeIn]>
+        <h3 class="text-lg font-semibold mb-4">Recommended Reorders</h3>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between p-4 bg-background-secondary rounded-lg">
+            <div>
+              <div class="font-medium">Product Name</div>
+              <div class="text-sm text-text-secondary">Current Stock: 15 | Threshold: 50</div>
+            </div>
+            <button class="px-4 py-2 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity">
+              Reorder
+            </button>
+          </div>
+          <div class="flex items-center justify-between p-4 bg-background-secondary rounded-lg">
+            <div>
+              <div class="font-medium">Another Product</div>
+              <div class="text-sm text-text-secondary">Current Stock: 8 | Threshold: 30</div>
+            </div>
+            <button class="px-4 py-2 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity">
+              Reorder
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Alert History Timeline -->
+      <div class="glass rounded-xl p-6" [@fadeIn]>
+        <h3 class="text-lg font-semibold mb-4">Alert History</h3>
+        <div class="space-y-4">
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+              <div class="w-0.5 h-full bg-border"></div>
+            </div>
+            <div class="flex-1 pb-4">
+              <div class="font-medium">Low Stock Alert</div>
+              <div class="text-sm text-text-secondary">Product ABC - 2 hours ago</div>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+              <div class="w-0.5 h-full bg-border"></div>
+            </div>
+            <div class="flex-1 pb-4">
+              <div class="font-medium">Expiring Item Alert</div>
+              <div class="text-sm text-text-secondary">Product XYZ - 5 hours ago</div>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+            </div>
+            <div class="flex-1">
+              <div class="font-medium">Supplier Delay Alert</div>
+              <div class="text-sm text-text-secondary">Supplier ABC - 1 day ago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  

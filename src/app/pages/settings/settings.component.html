@@ -1,0 +1,121 @@
+
+    <div class="container mx-auto px-4 py-6 max-w-4xl" #pageContainer>
+      <div class="mb-6" [@fadeIn]>
+        <h2 class="text-2xl mb-2">Settings & Preferences</h2>
+        <p class="text-text-secondary">Configure warehouse settings and preferences</p>
+      </div>
+      
+      <!-- Theme Settings -->
+      <div class="glass rounded-xl p-6 mb-6" [@fadeIn]>
+        <h3 class="text-lg font-semibold mb-4">Appearance</h3>
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="font-medium">Theme</div>
+            <div class="text-sm text-text-secondary">Choose light or dark mode</div>
+          </div>
+          <button
+            (click)="themeService.toggleTheme()"
+            class="px-4 py-2 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity"
+          >
+            {{ themeService.theme() === 'light' ? 'Dark Mode' : 'Light Mode' }}
+          </button>
+        </div>
+      </div>
+      
+      <!-- Warehouse Configuration -->
+      <div class="glass rounded-xl p-6 mb-6" [@fadeIn]>
+        <h3 class="text-lg font-semibold mb-4">Warehouse Configuration</h3>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium mb-2">Warehouse Name</label>
+            <input
+              type="text"
+              value="Main Warehouse"
+              class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-2">Location</label>
+            <input
+              type="text"
+              value="123 Main St, City, State"
+              class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-2">Capacity</label>
+            <input
+              type="number"
+              value="10000"
+              class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+        </div>
+      </div>
+      
+      <!-- Stock Thresholds -->
+      <div class="glass rounded-xl p-6 mb-6" [@fadeIn]>
+        <h3 class="text-lg font-semibold mb-4">Stock Thresholds</h3>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between text-sm mb-2">
+              <span>Low Stock Threshold</span>
+              <span class="font-medium">{{ lowStockThreshold }}%</span>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              [(ngModel)]="lowStockThreshold"
+              class="w-full"
+              #slider1
+            />
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-2">
+              <span>Critical Stock Threshold</span>
+              <span class="font-medium">{{ criticalStockThreshold }}%</span>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              [(ngModel)]="criticalStockThreshold"
+              class="w-full"
+              #slider2
+            />
+          </div>
+        </div>
+      </div>
+      
+      <!-- Notification Preferences -->
+      <div class="glass rounded-xl p-6 mb-6" [@fadeIn]>
+        <h3 class="text-lg font-semibold mb-4">Notification Preferences</h3>
+        <div class="space-y-3">
+          <label class="flex items-center gap-3">
+            <input type="checkbox" checked class="w-4 h-4 text-primary rounded" />
+            <span>Low stock alerts</span>
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" checked class="w-4 h-4 text-primary rounded" />
+            <span>Expiring items alerts</span>
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-4 h-4 text-primary rounded" />
+            <span>Supplier delay notifications</span>
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" checked class="w-4 h-4 text-primary rounded" />
+            <span>Weekly summary reports</span>
+          </label>
+        </div>
+      </div>
+      
+      <!-- Save Button -->
+      <div class="flex justify-end">
+        <button class="px-6 py-3 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity font-medium">
+          Save Settings
+        </button>
+      </div>
+    </div>
+  
